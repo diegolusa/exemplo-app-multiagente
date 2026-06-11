@@ -1,0 +1,1 @@
+"""Cliente, servidor e ferramentas MCP."""

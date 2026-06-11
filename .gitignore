@@ -1,0 +1,17 @@
+*.cpython-313.pyc
+**/__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+*.bak
+*.tmp
+*.swp
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+/docs
