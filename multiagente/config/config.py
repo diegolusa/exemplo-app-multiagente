@@ -11,7 +11,7 @@ class Config:
     MODEL_API_BASE = os.getenv("MODEL_API_BASE", "http://localhost:11434")
 
     # Embeddings
-    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "intfloat/multilingual-e5-base")
 
     # ChromaDB
     CHROMA_PATH = os.getenv("CHROMA_PATH", "../chroma_db")

@@ -133,7 +133,7 @@ source venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 
 # Iniciar o servidor Ollama (em outro terminal)
-ollama serve
+ollama serve (ou ollama login)
 
 # Executar o servidor MCP
 python -m multiagente.mcp.mcp_server
