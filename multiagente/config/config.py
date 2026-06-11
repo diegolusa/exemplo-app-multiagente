@@ -7,7 +7,7 @@ class Config:
     """Configuração da aplicação multiagente."""
 
     # Modelo Local (Ollama)
-    MODEL_NAME = os.getenv("MODEL_NAME", "llama2")
+    MODEL_NAME = os.getenv("MODEL_NAME", "gpt-oss:120b-cloud")
     MODEL_API_BASE = os.getenv("MODEL_API_BASE", "http://localhost:11434")
 
     # Embeddings

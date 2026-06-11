@@ -56,7 +56,7 @@ class RAGSystem:
 
         print(f"Base de conhecimento criada com {len(documents)} documentos e {total_chunks} chunks")
 
-    def _chunk_text(self, text: str, chunk_size: int = 600, overlap: int = 120) -> List[str]:
+    def _chunk_text(self, text: str, chunk_size: int = 300, overlap: int = 50) -> List[str]:
         """Divide texto em chunks com sobreposição para preservar contexto."""
         cleaned = " ".join(text.split())
         if len(cleaned) <= chunk_size:
@@ -99,12 +99,12 @@ class RAGSystem:
 
         raw_results = self.collection.query(
             query_embeddings=[query_embedding],
-            n_results=max(top_k * 4, top_k)
+            n_results=10
         )
 
         best_by_document = {}
         for doc, dist, meta in zip(raw_results["documents"][0], raw_results["distances"][0], raw_results["metadatas"][0]):
-            if dist > 0.5:
+            if dist > 0.6:
                 continue
 
             source_id = meta.get("original_id", "unknown")

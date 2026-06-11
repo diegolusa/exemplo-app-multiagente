@@ -111,7 +111,7 @@ class ExecutorAgent:
         self.llm = ChatOllama(
             model=model_config["model"],
             base_url=model_config["base_url"],
-            temperature=0.5,
+            temperature=0.0,
         )
 
         self.__mcp_client = MCPClient()
